@@ -1,0 +1,55 @@
+/* Contact Page Tabs Styles */
+
+.tab{
+	width: 60%;
+	position: relative;
+	border-radius: 5px;
+	margin: 1em auto;
+}
+
+.tab label{
+	background-color: red;
+	color: white;
+	text-align: center;
+	font-weight: bold;
+	border-radius: 5px;
+	display: block;
+	padding-top: .3em;
+	padding-bottom: .3em;
+}
+
+.tab input{
+	position: absolute;
+	top: 1000px;
+	display: none;
+}
+
+.tab-content{
+	font-family: 'Shadows Into Light Two', cursive;
+	height: 0;
+	overflow: hidden;
+	background-color: lightgrey;
+}
+
+.tab input[type="radio"]:checked ~ .tab-content{
+	height: auto;
+	padding-left: .5em;
+	padding-right: .5em;
+}
+
+
+.tab label:hover{
+	background-color: blue;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+
+.tab input:checked + label{
+	background-color: red;
+	border-radius: 5px;
+	font-size: 1em;
+	letter-spacing: 1px;
+	cursor: pointer;
+	box-shadow: 1px 1px 4px #666;
+}

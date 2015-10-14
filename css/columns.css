@@ -1,0 +1,89 @@
+.row{
+	display: flex;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 1em;
+}
+
+
+/* Media Queries
+================================ */
+ 
+@media (min-width: 1px) and (max-width: 768px)  {
+	.row{
+		display: block;
+	}
+	.row > [class^="col-"]{
+		padding-top: .5em;
+		padding-bottom: .5em;
+	}
+}
+
+@media (min-width: 769px) {
+	.row > [class^="col-"]{
+		float: left;
+		margin-left: 2%;
+		min-height: 1px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	
+	.row > [class^="col-"]:first-child{
+		margin-left: 0;	
+	}
+	.row > [class^="col-"]:last-child{
+		float: right;	
+	}
+
+	
+	/* Columns */
+
+	.col-1{
+		width:6.5%;
+	}
+	.col-2{
+		width:15%;
+	}
+	.col-3{
+		width:23.5%;
+	}
+	.col-4{
+		width: 32%;
+	}
+	.col-5{
+		width: 40.5%;
+	}
+	.col-6{
+		width: 49%;
+	}
+	.col-7{
+		width: 57.5%;
+	}
+	.col-8{
+		width: 66%;
+	}
+	.col-9{
+		width: 74.5%;
+	}
+	.col-10{
+		width: 83%;
+	}
+	.col-11{
+		width: 91.5%;
+	}
+	.col-12{
+		width: 100%;
+	}
+
+	
+
+	/* Clearfix */
+.row::after{
+	content: "";
+	clear: both;
+	display: table;
+}
+
+}

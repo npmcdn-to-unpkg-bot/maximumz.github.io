@@ -1,0 +1,249 @@
+@charset "utf-8";
+* {margin: 0px;padding: 0px;}
+
+
+/* Game SVG loading animation */
+
+.game{
+  background:#282828;
+  width: 100%;
+  height: auto;
+  padding-top: 2em;
+  overflow: hidden;
+}
+
+#global1{
+  width:70px;
+  margin:auto;
+  margin-top:50px;
+  position:relative;
+  cursor:pointer;
+  height:60px;
+}
+
+#global2{
+  width:70px;
+  margin:auto;
+  margin-top:50px;
+  position:relative;
+  cursor:pointer;
+  height:60px;
+}
+
+#global3{
+  width:70px;
+  margin:auto;
+  margin-top:50px;
+  position:relative;
+  cursor:pointer;
+  height:60px;
+}
+
+.mask{
+  position:absolute;
+  border-radius:2px;
+  overflow:hidden;
+   perspective: 1000;
+  backface-visibility: hidden;
+}
+
+.plane{
+  background:red;
+  width:400%;
+  height:100%;
+  position:absolute;
+  transform : translate3d(0px,0,0);
+  /*transition: all 0.8s ease; */
+  z-index:100;
+  perspective: 1000;
+  backface-visibility: hidden;
+}
+ 
+.animation{
+  transition: all 0.3s ease;
+}
+
+
+ 
+#top1 .plane{
+  z-index:2000;
+  animation : trans1 1.3s ease-in infinite  0s backwards;
+}
+
+#top2 .plane{
+  z-index:2000;
+  animation : trans1 1.3s ease-in infinite  0s backwards;
+}
+
+#top3 .plane{
+  z-index:2000;
+  animation : trans1 1.3s ease-in infinite  0s backwards;
+}
+
+#middle1 .plane{
+  transform : translate3d(0px,0,0);  
+  background : yellow;
+  animation : trans2 1.3s linear infinite  0.3s  backwards;
+
+}
+
+#middle2 .plane{
+  transform : translate3d(0px,0,0);  
+  background : yellow;
+  animation : trans2 1.3s linear infinite  0.3s  backwards;
+
+}
+
+#middle3 .plane{
+  transform : translate3d(0px,0,0);  
+  background : yellow;
+  animation : trans2 1.3s linear infinite  0.3s  backwards;
+
+}
+
+#bottom1 .plane{
+  z-index:2000;
+  animation : trans3 1.3s ease-out infinite  0.7s backwards;
+}
+
+#bottom2 .plane{
+  z-index:2000;
+  animation : trans3 1.3s ease-out infinite  0.7s backwards;
+}
+
+#bottom3 .plane{
+  z-index:2000;
+  animation : trans3 1.3s ease-out infinite  0.7s backwards;
+}
+
+
+
+#top1{
+  width:53px;
+  height:20px;
+  left:20px;
+  transform: skew(-15deg, 0);
+  z-index:100;
+}
+
+#top2{
+  width:53px;
+  height:20px;
+  left:20px;
+  transform: skew(-15deg, 0);
+  z-index:100;
+}
+
+#top3{
+  width:53px;
+  height:20px;
+  left:20px;
+  transform: skew(-15deg, 0);
+  z-index:100;
+}
+
+#middle1{
+  width:33px;
+  height:20px;
+  left:20px;
+  top:15px;
+  transform: skew(-15deg, 40deg)
+}
+
+#middle2{
+  width:33px;
+  height:20px;
+  left:20px;
+  top:15px;
+  transform: skew(-15deg, 40deg)
+}
+
+#middle3{
+  width:33px;
+  height:20px;
+  left:20px;
+  top:15px;
+  transform: skew(-15deg, 40deg)
+}
+
+#bottom1{
+  width:53px;
+  height:20px;
+  top:30px;  
+  transform: skew(-15deg, 0)
+}
+
+#bottom2{
+  width:53px;
+  height:20px;
+  top:30px;  
+  transform: skew(-15deg, 0)
+}
+
+#bottom3{
+  width:53px;
+  height:20px;
+  top:30px;  
+  transform: skew(-15deg, 0)
+}
+
+section p{
+  color:#008DFF;
+  position:absolute;
+  left: -3px;
+  top:5em;
+  font-family:Arial;
+  text-align:center;
+  font-size:10px;
+}
+
+@keyframes trans1{ 
+  from { 
+    transform : translate3d(53px,0,0)
+  }
+  to { 
+    transform : translate3d(-250px,0,0)
+  }
+}
+
+@keyframes trans2{ 
+  from { 
+    transform : translate3d(-160px,0,0)
+  }
+  to { 
+    transform : translate3d(53px,0,0)
+  }
+}
+
+@keyframes trans3{ 
+  from { 
+    transform : translate3d(53px,0,0)
+  }
+  to { 
+    transform : translate3d(-220px,0,0)
+  }
+}
+
+@keyframes animColor{ 
+  from { 
+    background : red;
+  }
+  25%{
+    background : yellow;
+  }
+  50%{
+    background : green;
+  }
+  75%{
+    background : brown;
+  }
+  to { 
+    background : blue;
+  }
+}
+
+@keyframes big{
+  100%{
+    transform: scale(.5);
+  }
+}
