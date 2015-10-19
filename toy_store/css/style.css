@@ -1,0 +1,557 @@
+@import url("normalize.css");
+
+@import url("columns.css");
+
+/* General Page Styles & Classes */
+
+* {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	transition: all .3s ease-out;
+}
+
+body {
+	font: normal 1em/1.5 sans-serif;
+	color: #222;
+	background-color: white;
+}
+
+h1, h2, h3, legend{
+	font-family: 'Oswald', sans-serif;
+}
+
+p, a, input, label, button{
+	font-family: 'Shadows Into Light Two', cursive;
+}
+
+.ie h1, .ie h2, .ie h3, .ie p, .ie a,{
+	color: white;
+}
+
+iframe{
+	margin: auto;
+	width: 100%;
+}
+
+hr{
+	margin: 5% 25%;
+}
+
+/* Link Styles*/
+
+.pg-link a{
+	text-decoration: none;
+	color: orange;
+}
+
+.pg-link a:hover{
+	color: red;
+}
+
+.pg-link a:visited{
+	color: blue;
+}
+
+/* Text Alignment Classes */
+
+.txt-r{
+	text-align: right;
+}
+
+.txt-c{
+	text-align: center;
+}
+
+.txt-l{
+	text-align: left;
+}
+
+/* Display Classes */
+
+.d-inline{
+	display: inline;
+}
+
+.d-inline-blk{
+	display: inline-block;
+}
+
+.d-blk{
+	display: block;
+}
+
+.table{
+	display: table;
+}
+
+.cell{
+	display: table-cell;
+}
+
+/* Defualt Padding Classes */
+
+.pad-r{
+	padding-right: 1em;
+}
+
+.pad-l{
+	padding-left: 1em;
+}
+
+.pad-t{
+	padding-top: 1em;
+}
+
+.pad-b{
+	padding-bottom: 1em;
+}
+
+.pad-all{
+	padding: .5em;
+}
+
+/* Defualt Margin Classes */
+
+.marg-t{
+	margin-top: 1em;
+}
+
+.marg-r{
+	margin-right: 1em;
+}
+
+.marg-b{
+	margin-bottom: 1em;
+}
+
+.marg-l{
+	margin-left: 1em;
+}
+
+marg-all{
+	margin: .5em;
+}
+
+.fixed{
+	position: fixed;
+}
+
+.relative{
+	position: relative;
+}
+
+/* Header styles */
+
+header{
+	height: 5em;
+	font: 1em/1.4 'Helvetica Neue', sans-serif;
+	color: #eee;
+	background:url('../img/lego-banner.jpg') no-repeat, linear-gradient(135deg, #9191ff, #ffb0b0 40%, white);
+	background-size: cover;
+	background-blend-mode: screen;
+}
+
+/* Logo position & animation */
+
+svg {
+  display: block;
+}
+
+.center *{
+  transform-origin: 50% 50%;
+  transition: 1s;
+}
+
+.center{
+	animation: turn-logo 1.5s ease-out backwards;
+  	animation-delay: 3s;
+}
+
+.logo{
+	margin-left: 1em;
+
+}
+
+@-webkit-keyframes turn-logo {
+  0%  {transform: rotate(0.285turn);}
+  100% {transform: rotate(4turn);}
+}
+
+@keyframes turn-logo {
+  0%  {transform: rotate(0.285turn);}
+  100% {transform: rotate(4turn);}
+}
+
+
+/* Navigation styles */
+
+nav{
+	text-align: right;
+}
+
+nav ul .button{
+	display: inline-block;
+	padding: .5em;
+	margin: 1.3em .5em 0 .5em;
+	border-radius: 5px;
+}
+
+nav ul li:hover{
+	cursor: pointer;
+	box-shadow: 1px 1px 4px #666;
+	transform: scale(1.1);
+}
+
+nav ul li:hover a{
+	color: white;
+}
+
+nav ul li:hover i{
+	transform: scale(1.5);
+	color: white;
+}
+
+nav a{
+	text-decoration: none;
+}
+
+nav i{
+	padding-right: .3em;
+}
+
+/* Page Title Styles */
+
+.title{
+	text-align: center;
+	color: red;
+	text-shadow: 2px 2px 5px black;
+	font-size: 3em;
+	text-decoration: underline; 
+}
+
+/* Slider */
+
+.slider-wrapper{
+	background-color: white;
+}
+
+.slider{
+	width: 950px;
+    overflow: hidden;
+    margin: auto;
+	margin-bottom: 1em;
+}
+
+#sliderImages {
+    width: 4750px;
+    height: 250px;
+    overflow: hidden;
+    animation: slider 16s infinite;
+}
+
+#sliderImages img {
+    float: left;
+}
+
+#sliderImages h1{
+	position: absolute;
+	color: white;
+	font-size: 4em;
+	text-shadow: 2px 2px 5px black;
+	padding-left: 3em;
+}
+
+@keyframes slider{
+    0%{margin-left: 0;}
+    15%{margin-left: 0;}
+    20%{margin-left: -950px;}
+    35%{margin-left: -950px;}
+    40%{margin-left: -1900px;}
+    55%{margin-left: -1900px;}
+	60%{margin-left: -2850px;}
+    75%{margin-left: -2850px;}
+	80%{margin-left: -3800px;}
+    90%{margin-left: -3800px;}
+	95%{margin-left: 0;}
+    100%{margin-left: 0;}
+}
+
+/* Body Content */
+
+.call-out{
+	margin: auto;
+	margin-bottom: 1em;
+	text-align: center;
+	background-color: #ffce49;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	margin-left: 0;
+	overflow: hidden;
+	vertical-align: middle;
+}
+
+.call-out p{
+	margin: 0;
+	padding-top: 1.4em;
+}
+
+.running-man{
+	text-align: center;
+	margin-left: 12em;
+	overflow: hidden;
+}
+
+.box{
+	border: solid 2px black;
+	text-align: center;
+	margin: auto;
+	padding: .5em;
+	margin-bottom: 1em;
+	min-height: 100%;
+}
+
+.box p{
+	padding: .5em .5em 0 .5em;
+}
+
+.left{
+	float: left;
+}
+
+.right{
+	float: right;
+}
+
+/* Button Styles */
+
+.button{
+	background-color: red;
+	color: white;
+	border-radius: 7px;
+	padding: .7em;
+}
+
+.button i, .call-out button i{
+	padding-right: .3em;
+}
+
+.button{
+	max-width: 7em;
+	margin: auto;
+}
+
+.button a{
+	text-decoration: none;
+	color: white;
+}
+
+.button:hover{
+	background-color: #001dff;
+	transform: scale(1.1);
+	cursor: pointer;
+}
+
+.button:hover i{
+	transform: scale(1.5)
+}
+
+.selected{
+	box-shadow: 1px 1px 4px #666;
+}
+
+.call-out .button{
+	width: 100%;
+	text-align: center;
+	text-decoration: none;
+	margin-left: 1em;
+}
+
+
+/* Image Styles*/
+
+.box img{
+	width: 80%;
+}
+
+.store img{
+	max-width: 60%;
+	padding-top: 2em;
+}
+
+.store img:hover{
+	transform: scale(1.3);
+	cursor: pointer;
+}
+
+
+/* Footer Styles */
+
+footer{
+	padding-top: .5em;
+	color: black;
+	text-align: center;
+	background:url('../img/lego-banner.jpg') no-repeat, linear-gradient(135deg, #9191ff, #ffb0b0 40%, white);
+	background-size: cover;
+	background-blend-mode: screen;
+}
+
+.row{
+	margin-bottom: 0;
+}
+
+footer .selected{
+	color: darkblue;
+	background-color: white;
+	box-shadow: 1px 1px 4px #666;
+}
+
+.footer-nav{
+	padding-bottom: .8em
+}
+
+.footer-nav a{
+	color: white;
+	text-decoration: none;
+}
+
+.footer-nav li{
+	text-align: center;
+	background-color: red;
+	padding: .1em;
+	margin: auto;
+	margin-top: .5em;
+	margin-bottom: .5em;
+	border-radius: 5px;
+	max-width: 10em;
+}
+
+.footer-nav li:hover{
+	background-color: blue;
+	cursor: pointer;
+	box-shadow: 1px 1px 4px #666;
+	transform: scale(1.1);
+}
+
+.footer-nav li:hover a{
+	color: white;
+}
+
+.footer-nav i{
+	color: white;
+}
+
+footer i{
+	color: black;
+	padding: 5px;
+	margin: 2px;
+	border-radius: 5px;
+	margin: auto;
+}
+
+footer i:hover{
+	color: blue;
+	cursor: pointer;
+	transform: scale(1.5);
+}
+
+footer iframe{
+	width: 80%;
+}
+
+footer h1, footer h3, footer p, footer li i{
+       color: #ff4141;
+       }
+
+.user{
+	text-align: center;
+}
+
+
+
+.user img:hover{
+	cursor: pointer;
+	transform: scale(1.2);
+}
+
+/* Desktop Displays */
+@media (min-width: 791px) { 
+	
+	.mob-img{
+	display: none;
+	}
+	
+}
+
+
+/* Smaller Device Displays */
+@media (min-width: 1px) and (max-width: 790px)  {
+	h1, h2, h3, h4, h5, p, a{
+		text-align: center;
+	} 
+	
+	.main-nav li {
+		margin-top: 12px;
+	}
+	
+	.logo svg{
+		clear: both;
+		margin: auto;
+	}
+	
+	header{
+	height: auto;
+	}
+	
+	header .col-8{
+		text-align: center;
+	}
+	
+	nav ul li{
+	position: relative;
+	min-width: 60%;
+	display: block;
+	padding: .5em .5em 2em .5em;
+	margin: 1.3em 2em 0 0;
+	border-radius: 5px;
+	text-align: center;
+}
+	nav ul li .button{
+		margin: auto;
+	}
+	
+	
+	.slider-wrapper{
+		display: none;
+	}
+	
+	.mob-img{
+		display: inline;
+		margin-bottom: 1em;
+	}
+	
+	img{
+		width: 100%;
+	}
+	
+	.box{
+		margin-bottom: 1em;
+	}
+	
+	footer{
+		position: relative;
+	}
+	
+	div{
+		display: block;
+	}
+	
+	.user img{
+	width: 65px;
+	height: 65px;
+	}
+	
+	.call-out{
+		display: none;
+	}
+}
+
