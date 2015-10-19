@@ -139,10 +139,12 @@ body {
 a {
   color: #0074d9;
   text-decoration: none;
+  transition: all 1s ease-out;
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  color: #5ad65a;
 }
 
 pre, code {
