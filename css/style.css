@@ -1,2 +1,46 @@
 @charset "utf-8";
 * {margin: 0px;padding: 0px;}
+
+i{
+    color: #0074d9;
+    transition: all 1s ease-out;
+}
+i:hover{
+    color: #88f288;
+}
+
+.fa-bolt{
+  animation : big 1.3s infinite;
+  transform: rotateY(270deg);
+}
+
+.fa-spinner{
+  
+}
+
+@keyframes animColor{ 
+  from { 
+    background : red;
+  }
+  25%{
+    background : yellow;
+  }
+  50%{
+    background : green;
+  }
+  75%{
+    background : brown;
+  }
+  to { 
+    background : blue;
+  }
+}
+
+@keyframes big{
+  0%{
+    transform: scale(.7);
+  }
+  100%{
+    transform: scale(1.5);
+  }
+}

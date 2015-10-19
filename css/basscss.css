@@ -144,7 +144,7 @@ a {
 
 a:hover {
   text-decoration: none;
-  color: #5ad65a;
+  color: #88f288;
 }
 
 pre, code {
@@ -156,6 +156,8 @@ hr {
   border: 0;
   border-bottom-style: solid;
   border-bottom-width: 1px;
+  width: 60%;
+  margin: auto;
   border-bottom-color: rgba(0,0,0,.125);
 }
 
