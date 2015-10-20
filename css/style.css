@@ -9,6 +9,22 @@ i:hover{
     color: #88f288;
 }
 
+.full-pic{
+  background-image: url(../img/code.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.title{
+  min-height: 12em;
+  background-color: rgba(0, 0, 0, 0.59);
+  padding-top: 1em;
+}
+
+.title h1{
+  font-size: 3em;
+}
+
 .fa-bolt{
   animation : big 1.3s infinite;
   transform: rotateY(270deg);
