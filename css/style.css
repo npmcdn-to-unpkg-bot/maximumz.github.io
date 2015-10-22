@@ -1,6 +1,7 @@
 @charset "utf-8";
 * {margin: 0px;padding: 0px;}
 
+
 i{
     color: #0074d9;
     transition: all 1s ease-out;
@@ -10,15 +11,18 @@ i:hover{
 }
 
 .full-pic{
-  background-image: url(../img/code.jpg);
+  background-image: url(../img/computer.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center right;
 }
 
 .title{
-  min-height: 12em;
-  background-color: rgba(0, 0, 0, 0.59);
+  min-height: auto;
   padding-top: 1em;
+  padding-bottom: 3em;
+  text-shadow: 2px 2px 4px #000000;
+  background-color: rgba(0, 0, 0, 0.71);
 }
 
 .title h1{
@@ -28,6 +32,7 @@ i:hover{
 .fa-bolt{
   animation : big 1.3s infinite;
   transform: rotateY(270deg);
+  margin-left: .5em;
 }
 
 .fa-spinner{
@@ -54,9 +59,19 @@ i:hover{
 
 @keyframes big{
   0%{
-    transform: scale(.7);
+    transform: scale(.9);
   }
-  100%{
+  20%{
+    transform: scale(1.6);
+  }
+  60%{
+    transform: scale(1.1);
+  }
+  80%{
     transform: scale(1.5);
   }
+  100%{
+    transform: scale(.9);
+  }
 }
+

@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <title>Maximized Potential Ltd | Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/video.css">
+    <link rel="stylesheet" type="text/css" href="css/menu.css">
     <link rel="stylesheet" type="text/css" href="css/basscss.min.css">
     <link rel="stylesheet" type="text/css" href="css/basscss.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -13,26 +15,49 @@
 </head>
 <body>
     <header class="green col-12 bg-blue border-bottom clearfix">
-       <div class="container">
-          <div class="relative left lg-col-4 sm-col-12">
-           <i class="fa fa-spinner fa-4x fa-pulse white ml2 p1 absolute"></i><i class="fa fa-bolt fa-3x fa-rotate-270 yellow ml3 p2 absolute"></i>
+        <div class="container">
+            <div class="relative lg-col-4 sm-col-12">
+           <i class="fa fa-circle-o fa-4x white ml2 p1 absolute"></i><i class="fa fa-bolt fa-3x fa-rotate-270 yellow p2 absolute"></i>
+               </div>
+               <div class="lg-col-8 inline-block right md-show lg-show">
+                <nav>
+                   <ul class="center">
+                        <li class="btn"><a href="index.html" class="white"><h3>Home</h3></a></li>
+                        <li class="btn"><a href="about.html" class="white"><h3>About</h3></a></li>
+                        <li class="btn"><a href="gallary.html" class="white"><h3>Gallary</h3></a></li>
+                        <li class="btn"><a href="projects.html" class="white"><h3>Projects</h3></a></li>
+                        <li class="btn"><a href="contact.html" class="white"><h3>Contact</h3></a></li>
+                    </ul>
+                </nav>
+                </div>
+        <div class="sm-hide md-hide right">
+        <a href="#menu" id="toggle"><span></span></a>
+
+            <div id="menu">
+              <ul>
+                <li class="btn"><a href="index.html" class="white"><h3>Home</h3></a></li>
+                        <li class="btn"><a href="about.html" class="white"><h3>About</h3></a></li>
+                        <li class="btn"><a href="gallary.html" class="white"><h3>Gallary</h3></a></li>
+                        <li class="btn"><a href="projects.html" class="white"><h3>Projects</h3></a></li>
+                        <li class="btn"><a href="contact.html" class="white"><h3>Contact</h3></a></li>
+              </ul>
+            </div>    
        </div>
-        <nav><ul class="right center">
-            <li class="btn"><a class="white"><h3>Home</h3></a></li>
-            <li class="btn"><a class="white"><h3>About</h3></a></li>
-            <li class="btn"><a class="white"><h3>Gallary</h3></a></li>
-            <li class="btn"><a class="white"><h3>Projects</h3></a></li>
-            <li class="btn"><a class="white"><h3>Contact</h3></a></li>
-        </ul></nav>
-        </div>
+    </div>
     </header>
-       <div class="full-pic col-12 top-0 center white">
+        <div class="col-12 center white">
           <div class="title">
            <h1>Maximized Potential Ltd</h1>
-           <h3>Bringing your online experience to the fullest!</h3>
+           <h3>Online experience to the fullest!</h3>
+              <video autoplay muted poster="video/My_Movie.jpg" id="bgvid" loop>
+
+<source src="video/My_Movie.webm" type="video/webm">
+<source src="video/My_Movie.mp4" type="video/mp4">
+</video>
+
            </div>
        </div>
-        <div class="center col-12 lg-flex container">
+        <div class="center col-12 lg-flex container bg-white">
             <div class="lg-col-4 sm-col-12 border rounded m2">
                 <h3>Making a difference</h3>
                 <i class="fa fa-globe fa-5x py2"></i>
@@ -57,6 +82,49 @@
     <footer>
 
     </footer>
+    <script>
+    var theToggle = document.getElementById('toggle');
+
+// based on Todd Motto functions
+// http://toddmotto.com/labs/reusable-js/
+
+// hasClass
+function hasClass(elem, className) {
+	return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
+}
+// addClass
+function addClass(elem, className) {
+    if (!hasClass(elem, className)) {
+    	elem.className += ' ' + className;
+    }
+}
+// removeClass
+function removeClass(elem, className) {
+	var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ') + ' ';
+	if (hasClass(elem, className)) {
+        while (newClass.indexOf(' ' + className + ' ') >= 0 ) {
+            newClass = newClass.replace(' ' + className + ' ', ' ');
+        }
+        elem.className = newClass.replace(/^\s+|\s+$/g, '');
+    }
+}
+// toggleClass
+function toggleClass(elem, className) {
+	var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, " " ) + ' ';
+    if (hasClass(elem, className)) {
+        while (newClass.indexOf(" " + className + " ") >= 0 ) {
+            newClass = newClass.replace( " " + className + " " , " " );
+        }
+        elem.className = newClass.replace(/^\s+|\s+$/g, '');
+    } else {
+        elem.className += ' ' + className;
+    }
+}
+
+theToggle.onclick = function() {
+   toggleClass(this, 'on');
+   return false;
+    }</script>
 </body>
 
 </html>
