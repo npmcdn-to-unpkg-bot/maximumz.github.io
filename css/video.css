@@ -1,24 +1,31 @@
 @charset "utf-8";
-* {margin: 0px;padding: 0px;}
+* {
+  margin: 0px;
+  padding: 0px;
+}
 
-video { 
-    position: fixed;
-    min-width: 100%;
-    min-height: auto;
-    width: auto;
-    height: auto;
-    overflow: hidden;
-    z-index: -100;
-    transform: translateX(-50%) translateY(-60%);
- background: url(../img/computer.jpg) no-repeat;
+video {
+  position: absolute;
+  max-width: 100%;
+  min-height: auto;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-60%);
+  background: url(../img/computer.jpg) no-repeat;
   background-size: cover;
   transition: 1s opacity;
 }
-.stopfade { 
-   opacity: .5;
+
+.stopfade {
+  opacity: .5;
 }
 
 @media screen and (max-device-width: 800px) {
-  html { background: url(../img/computer.jpg) #000 no-repeat center center fixed; }
-  #bgvid { display: none; }
+  html {
+    background: url(../video/fullscreen.png) #000 no-repeat center center fixed;
+  }
+  #bgvid {
+    display: none;
+  }
 }
