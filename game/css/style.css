@@ -26,7 +26,6 @@ h1 {
 body {
     text-align: center;
     overflow-x: hidden;
-    background-color: #ffd0d0;
 }
 
 h2 {
@@ -76,20 +75,20 @@ form p {
 
 /* street fighter background scenes */
 
-.login-background {
-    background-image: url(../img/ken_login.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center top;
-    min-height: 100%;
+.login-background { 
+  background: url(../img/ken_login.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-.quiz-background {
-    background-image: url(../img/doctype-hi-res.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center bottom;
-    height: 100%;
+.quiz-background { 
+  background: url(../img/doctype-hi-res.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 
@@ -124,11 +123,6 @@ button:active {
     border-radius: 15px;
     padding: .5em;
 }
-
-.btn:hover {
-    background-color: yellow;
-}
-
 
 .btn:hover:before {
     content: url(../img/fireball.gif);
