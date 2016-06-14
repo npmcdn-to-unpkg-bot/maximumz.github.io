@@ -4,6 +4,14 @@
   padding: 0px;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+}
+
+p, blockquote, label {
+    font-family: 'Roboto', sans-serif;
+}
+
 i {
   color: #0074d9;
   transition: all 1s ease-out;
@@ -43,6 +51,10 @@ body {
 i.fa.fa-american-sign-language-interpreting {
     position: absolute;
     z-index: 100;
+    color: white;
+}
+
+footer {
     color: white;
 }
 

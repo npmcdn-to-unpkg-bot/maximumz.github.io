@@ -1,0 +1,646 @@
+@charset "UTF-8";
+
+/* special font for the street fighter theme */
+
+@font-face {
+    font-family: "SSF4 ABUKET";
+    src: url("../font/SSF4_ABUKET.eot?") format("eot"), url("../font/SSF4_ABUKET.woff") format("woff"), url("../font/SSF4_ABUKET.ttf") format("truetype"), url("../font/SSF4_ABUKET.svg#") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+    font-family: "SSF4 ABUKET";
+    font-size: 2em;
+    margin: 0;
+    background-image: -webkit-linear-gradient(yellow, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+
+/* general global styles */
+
+body {
+    text-align: center;
+    overflow-x: hidden;
+    background-color: #ffd0d0;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+h2,
+h3,
+form span {
+    font-family: 'Fjalla One', sans-serif;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+}
+
+a {
+    text-decoration: none;
+    color: red;
+}
+
+form {
+    padding-top: 10%;
+    flex-direction: column;
+}
+
+form input,
+form span {
+    display: flex;
+    margin: 1em auto;
+    padding: .5em;
+}
+
+form span {
+    font-weight: bolder;
+    font-size: 1.2em;
+    color: yellow;
+    border-radius: 5px;
+}
+
+
+/* street fighter background scenes */
+
+.login-background {
+    background-image: url(../img/ken_login.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    min-height: 100%;
+}
+
+.quiz-background {
+    background-image: url(../img/doctype-hi-res.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    height: 100%;
+}
+
+
+/* button styles */
+
+button {
+    margin: 10px;
+    width: auto;
+    color: black;
+    background-color: transparent;
+    transition: all 1s;
+    font-size: 1.2em;
+    font-weight: 700;
+    box-shadow: none;
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+button:focus,
+button:active {
+    outline: 0;
+    color: black;
+}
+
+.btn {
+    position: relative;
+    background-color: orange;
+    border-radius: 15px;
+    padding: .5em;
+}
+
+.btn:hover {
+    background-color: yellow;
+}
+
+.btn:hover:before {
+    content: url(../img/fireball.gif);
+    display: inline;
+    position: absolute;
+    left: -170px;
+    top: -25px;
+}
+
+btn:focus,
+btn:active {
+    background-color: orange;
+}
+
+
+/* classes & id's */
+
+.big {
+    font-size: 1.7em;
+}
+
+.headline {
+    margin-bottom: 2em;
+}
+
+.hidden {
+    display: none;
+}
+
+#score {
+    border: solid grey 1px;
+    background-color: rgba(43, 194, 83, 0.65);
+    padding: .5em;
+    width: auto;
+    margin: 0 auto 1em auto;
+}
+
+#wrong {
+    border: solid grey 1px;
+    background-color: rgba(194, 43, 43, 0.65);
+    padding: .5em;
+    width: auto;
+    margin: 0 auto 1em auto;
+}
+
+.your-score {
+    color: white;
+}
+
+.black {
+    background-color: black;
+    z-index: 10;
+}
+
+.hidden {
+    display: none;
+}
+
+#continue {
+    font-size: 2.5em;
+}
+
+#progress {
+    margin-bottom: 1em;
+}
+
+span {
+    transition: all ease-in-out 2s;
+}
+
+video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 70%;
+    max-height: 4 0%;
+    margin-top: 3em;
+    width: auto;
+    height: auto;
+    padding: 4em;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+}
+
+.ken,
+.fireball {
+    z-index: 1000;
+    margin-left: 3em;
+    width: 70px;
+    height: 80px;
+    background-image: url("../img/ken.png");
+    transform: scale(1.5);
+}
+
+
+/* ken's fireball */
+
+.fireball {
+    left: 100%;
+    bottom: 0px;
+    margin-left: 0;
+    /* default margin-left */
+    background-position: 140px 320px;
+    /* default background position */
+    -webkit-transition: margin 2.5s linear;
+    transition: margin 2.5s linear;
+    /* triggering the movement with this class */
+    -webkit-animation: fireball steps(2) 0.15s infinite;
+    animation: fireball steps(2) 0.15s infinite;
+}
+
+.fireball:before {
+    left: 25px;
+    right: 25px;
+}
+
+.fireball.moving {
+    margin-left: 1800px;
+}
+
+@-webkit-keyframes fireball {
+    from {
+        background-position: 0px -320px;
+    }
+    to {
+        background-position: -140px -320px;
+    }
+}
+
+@keyframes fireball {
+    from {
+        background-position: 0px -320px;
+    }
+    to {
+        background-position: -140px -320px;
+    }
+}
+
+
+/* ken's fireball impact explosion */
+
+.explode {
+    -webkit-animation: explode steps(4) 0.5s 1;
+    animation: explode steps(4) 0.5s 1;
+}
+
+@-webkit-keyframes explode {
+    from {
+        background-position: 0px -400px;
+    }
+    to {
+        background-position: -280px -400px;
+    }
+}
+
+@keyframes explode {
+    from {
+        background-position: 0px -400px;
+    }
+    to {
+        background-position: -280px -400px;
+    }
+}
+
+
+/* stance */
+
+.stance {
+    -webkit-animation: stance steps(4) 0.5s infinite;
+    animation: stance steps(4) 0.5s infinite;
+}
+
+@-webkit-keyframes stance {
+    from {
+        background-position: 0px -80px;
+    }
+    to {
+        background-position: -280px -80px;
+    }
+}
+
+@keyframes stance {
+    from {
+        background-position: 0px -80px;
+    }
+    to {
+        background-position: -280px -80px;
+    }
+}
+
+
+/* hadoken - must be declared AFTER .stance */
+
+.hadoken {
+    -webkit-animation: hadoken steps(4) 0.5s infinite;
+    animation: hadoken steps(4) 0.5s infinite;
+}
+
+@-webkit-keyframes hadoken {
+    from {
+        background-position: 0px 0px;
+    }
+    to {
+        background-position: -280px 0px;
+    }
+}
+
+@keyframes hadoken {
+    from {
+        background-position: 0px 0px;
+    }
+    to {
+        background-position: -280px 0px;
+    }
+}
+
+
+/* progress bar */
+
+.meter {
+    z-index: 100;
+    height: 15px;
+    position: relative;
+    max-width: 75%;
+    margin: 30px auto;
+    background: #555;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+    padding: 10px;
+    -webkit-box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+    -moz-box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.meter > span {
+    display: block;
+    height: 100%;
+    -webkit-border-top-right-radius: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+    -moz-border-radius-topright: 8px;
+    -moz-border-radius-bottomright: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    -webkit-border-top-left-radius: 20px;
+    -webkit-border-bottom-left-radius: 20px;
+    -moz-border-radius-topleft: 20px;
+    -moz-border-radius-bottomleft: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: rgb(43, 194, 83);
+    background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(43, 95, 194)), color-stop(1, rgb(148, 193, 255)));
+    background-image: -moz-linear-gradient( center bottom, rgb(43, 194, 83) 37%, rgb(84, 240, 84) 69%);
+    -webkit-box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.3), inset 0 -2px 6px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.3), inset 0 -2px 6px rgba(0, 0, 0, 0.4);
+    box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.3), inset 0 -2px 6px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.meter > span:after,
+.animate > span > span {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.25, rgba(255, 255, 255, .2)), color-stop(.25, transparent), color-stop(.5, transparent), color-stop(.5, rgba(255, 255, 255, .2)), color-stop(.75, rgba(255, 255, 255, .2)), color-stop(.75, transparent), to(transparent));
+    background-image: -moz-linear-gradient( -45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
+    z-index: 1;
+    -webkit-background-size: 50px 50px;
+    -moz-background-size: 50px 50px;
+    background-size: 50px 50px;
+    -webkit-animation: move 2s linear infinite;
+    -moz-animation: move 2s linear infinite;
+    -webkit-border-top-right-radius: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+    -moz-border-radius-topright: 8px;
+    -moz-border-radius-bottomright: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    -webkit-border-top-left-radius: 20px;
+    -webkit-border-bottom-left-radius: 20px;
+    -moz-border-radius-topleft: 20px;
+    -moz-border-radius-bottomleft: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    overflow: hidden;
+}
+
+.animate > span:after {
+    display: none;
+}
+
+@-webkit-keyframes move {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 50px 50px;
+    }
+}
+
+@-moz-keyframes move {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 50px 50px;
+    }
+}
+
+.nostripes > span > span,
+.nostripes > span:after {
+    -webkit-animation: none;
+    -moz-animation: none;
+    background-image: none;
+}
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.animated.infinite {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes flash {
+    from,
+    50%,
+    to {
+        opacity: 1;
+    }
+    25%,
+    75% {
+        opacity: 0;
+    }
+}
+
+@keyframes flash {
+    from,
+    50%,
+    to {
+        opacity: 1;
+    }
+    25%,
+    75% {
+        opacity: 0;
+    }
+}
+
+.flash {
+    -webkit-animation-name: flash;
+    animation-name: flash;
+}
+
+@-webkit-keyframes pulse {
+    from {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    50% {
+        -webkit-transform: scale3d(1.05, 1.05, 1.05);
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
+    to {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes pulse {
+    from {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    50% {
+        -webkit-transform: scale3d(1.05, 1.05, 1.05);
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
+    to {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.pulse {
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+}
+
+
+/* colums & responsive layouts */
+
+.row {
+    width: 100%;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* common columns definitions */
+
+.col1,
+.col2,
+.col3,
+.col4,
+.col5,
+.col6,
+.col7,
+.col8,
+.col9,
+.col10,
+.col11,
+.col12 {
+    display: inline-block;
+    margin: 0 3% 0 0;
+}
+
+.col1 {
+    width: 5.5%;
+}
+
+.col2 {
+    width: 14%;
+}
+
+.col3 {
+    width: 22.5%;
+}
+
+.col4 {
+    width: 31%;
+}
+
+.col5 {
+    width: 39.5%;
+}
+
+.col6 {
+    width: 48%;
+}
+
+.col7 {
+    width: 56.5%;
+}
+
+.col8 {
+    width: 65%;
+}
+
+.col9 {
+    width: 73.5%;
+}
+
+.col10 {
+    width: 82%;
+}
+
+.col11 {
+    width: 90.5%;
+}
+
+.col12 {
+    width: 99%;
+    margin: 0;
+}
+
+.col1 img,
+.col2 img,
+.col3 img,
+.col4 img,
+.col5 img,
+.col6 img,
+.col7 img,
+.col8 img,
+.col9 img,
+.col10 img,
+.col11 img,
+.col12 img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* small devices */
+
+@media all and (max-width: 768px) {
+    .col1,
+    .col2,
+    .col3,
+    .col4,
+    .col5,
+    .col6,
+    .col7,
+    .col8,
+    .col9,
+    .col10,
+    .col11 {
+        float: none;
+        width: 99%;
+    }
+    .ken,
+    .fireball {
+        margin-left: 0;
+    }
+}

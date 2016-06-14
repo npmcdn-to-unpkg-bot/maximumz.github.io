@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Assessment</title>
+    <meta name="description" content="A CSS quiz using JavaScript, CSS and HTML forms.">
+    <meta name="keywords" content="quiz, css, javascript, html, assessment">
+    <meta name="viewport" content="width=device-width, minimum-scale=0.25, maximum-scale=1.6, initial-scale=1.0">
+    <!--<link rel="icon" href="favicon.ico" type="image/x-icon">-->
+    <link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="quiz-background">
+    <div class="col12">
+        <h1 data-text="JavaScript Assessment" class="animated infinite pulse"><span class="big">J</span>AVA<span class="big">S</span>CRIPT <span class="big">A</span>SSESSMENT</h1>
+
+
+        <!-- quiz starts here -->
+        <div id="quiz" class="col12">
+            <h2>Quiz Time</h2>
+            <h2 id="progress" class="col12">Question x of y</h2>
+            <div class="row">
+
+                <h3 id="score" class="col6"></h3>
+                <h3 id="wrong" class="col6 last"></h3>
+            </div>
+            <h2 id="question" class="headline"></h2>
+
+            <div id="choices" class="row">
+                <p id="choice0"></p>
+                <button href="#ken" id="guess0"></button>
+
+                <p id="choice1"></p>
+                <button href="#ken" id="guess1"></button>
+
+                <p id="choice2"></p>
+                <button href="#ken" id="guess2"></button>
+
+                <p id="choice3"></p>
+                <button href="#ken" id="guess3"></button>
+            </div>
+            <!-- ken & the progress bar -->
+            <div class="row">
+                <div class="ken stance"></div>
+                <div class="meter animated infinite flash col8">
+                    <span id="progress-bar" style="width: 0%"></span>
+                    <a id="ken"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/jquery-2.2.0.min.js"></script>
+<script src="js/app.js"></script>
+
+</html>
