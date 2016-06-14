@@ -18,7 +18,7 @@ a:hover i {
 }
 
 .full-pic {
-  background-image: url(../video/fullscreen.png);
+  background-image: url(../video/My_Movie.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center right;
@@ -36,12 +36,15 @@ a:hover i {
   font-size: 3em;
 }
 
-.fa-bolt {
-  margin-left: .5em;
-  animation: big 1.3s infinite;
+body {
+    overflow-x: hidden;
 }
 
-.fa-circle-o {}
+i.fa.fa-american-sign-language-interpreting {
+    position: absolute;
+    z-index: 100;
+    color: white;
+}
 
 @keyframes animColor {
   from {
@@ -70,5 +73,35 @@ a:hover i {
   }
   100% {
     transform: scale(.9);
+  }
+}
+
+@charset "utf-8";
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+video {
+  position: absolute;
+  min-width: 100%;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-60%);
+  background: url(../img/computer.jpg) no-repeat;
+  background-size: cover;
+  transition: 1s opacity;
+}
+
+.stopfade {
+  opacity: .5;
+}
+
+@media screen and (max-device-width: 800px) {
+  html {
+    background: url(../video/fullscreen.png) #000 no-repeat center center fixed;
+  }
+  #bgvid {
+    display: none;
   }
 }
