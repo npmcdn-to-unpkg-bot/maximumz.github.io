@@ -1,6 +1,6 @@
 <?php
 
-require("http://forum.maximizedpotential.co.nz/config.php");
+require("../config.php");
 
 $reg_username = trim($_POST['reg_username']);
 $reg_email = trim($_POST['reg_email']);

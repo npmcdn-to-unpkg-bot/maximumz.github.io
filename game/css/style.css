@@ -35,7 +35,7 @@ h2 {
 
 h2,
 h3,
-form span {
+form span, form p {
     font-family: 'Fjalla One', sans-serif;
 }
 
@@ -55,17 +55,22 @@ form {
 }
 
 form input,
-form span {
+form span, form p {
     display: flex;
     margin: 1em auto;
     padding: .5em;
 }
 
-form span {
+form span, form p {
     font-weight: bolder;
     font-size: 1.2em;
     color: yellow;
     border-radius: 5px;
+    text-shadow: 2px 2px 4px black;
+}
+
+form p {
+    font-size: 1.6em;
 }
 
 
@@ -130,6 +135,10 @@ button:active {
     position: absolute;
     left: -170px;
     top: -25px;
+}
+
+.btn:focus:before {
+    content: none;
 }
 
 btn:focus,

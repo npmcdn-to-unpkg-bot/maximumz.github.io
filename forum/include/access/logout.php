@@ -1,5 +1,5 @@
 <?php
-require("http://forum.maximizedpotential.co.nz/config.php");      
+require("../config.php");      
       
 $logout = 'UPDATE users SET session_id = NULL WHERE user_id = "' . $_SESSION['users']['user_id'] . '" LIMIT 1';
         

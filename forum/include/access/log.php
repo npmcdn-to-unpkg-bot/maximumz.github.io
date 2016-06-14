@@ -1,6 +1,6 @@
 <?php
 
-require("http://forum.maximizedpotential.co.nz/config.php");
+require("../config.php");
 
 $login_email = trim($_POST['login_email']);
 $login_password = $_POST['login_password'];

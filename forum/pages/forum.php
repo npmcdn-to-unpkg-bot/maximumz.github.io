@@ -1,5 +1,5 @@
 <?php
-require("http://forum.maximizedpotential.co.nz/config.php");
+require("../include/config.php");
 
 $forum_query = "SELECT * FROM topics ORDER BY topic_id DESC";
 $forum_result = mysqli_query($link, $forum_query);

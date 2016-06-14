@@ -1,5 +1,5 @@
 <?php
-require("http://forum.maximizedpotential.co.nz/config.php");
+require("../include/config.php");
 ?>
 <!DOCTYPE html>
 <html>

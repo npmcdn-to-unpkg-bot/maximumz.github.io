@@ -44,6 +44,6 @@ function enableSubmitButton() {
 
 //add events to name & email
 
-$email.focus(validateEmail).keyup(validateEmail).keyup(enableSubmitButton);
-$name.focus(validateName).keyup(validateName).keyup(enableSubmitButton);
+$email.focus(validateEmail).keyup(validateEmail).keyup(enableSubmitButton).change(validateEmail).change(enableSubmitButton);
+$name.focus(validateName).keyup(validateName).keyup(enableSubmitButton).change(validateName).change(enableSubmitButton);
 enableSubmitButton();

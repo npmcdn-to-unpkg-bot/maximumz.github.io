@@ -1,5 +1,5 @@
 <?php
-require("http://forum.maximizedpotential.co.nz/config.php");
+require("../include/config.php");
 
 $error_report = false;
 $success_report = false;

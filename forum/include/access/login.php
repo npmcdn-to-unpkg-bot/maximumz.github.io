@@ -1,5 +1,5 @@
 <?php
-require("http://forum.maximizedpotential.co.nz/config.php");
+require("../config.php");
     $error = false;
 if(isset($_SESSION['login_error'])){
 $login_error = $_SESSION['login_error'];
