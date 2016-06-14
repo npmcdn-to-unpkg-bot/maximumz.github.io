@@ -128,6 +128,9 @@ button:active {
 .btn:hover {
     background-color: yellow;
 }
+.btn:focus {
+    background-color: transparent;
+}
 
 .btn:hover:before {
     content: url(../img/fireball.gif);
