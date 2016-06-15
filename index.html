@@ -10,28 +10,44 @@
     <link href='https://fonts.googleapis.com/css?family=Merriweather:900italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <script src="https://use.fontawesome.com/dcb232ffeb.js"></script>
+    <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
 </head>
 
 <body>
     <header class="col-12 bg-black border-bottom clearfix">
+        <span id="home"></span>
         <div class="container">
             <div class="relative lg-col-4 sm-col-12">
-                <i class="fa fa-american-sign-language-interpreting fa-5x"></i>
+                <a href="index.html"><i class="fa fa-hand-spock-o fa-4x"></i></a>
             </div>
             <div class="lg-col-8 inline-block right">
-                <nav>
-                    <ul class="center">
-                        <li class="btn"><a href="index.html" class="white"><h3>Home</h3></a></li>
-                        <li class="btn"><a href="about.html" class="white"><h3>About</h3></a></li>
-                        <li class="btn"><a href="gallary.html" class="white"><h3>Gallary</h3></a></li>
-                        <li class="btn"><a href="projects.html" class="white"><h3>Projects</h3></a></li>
-                        <li class="btn"><a href="contact.html" class="white"><h3>Contact</h3></a></li>
+                <nav id="desk-nav">
+                    <ul class="right">
+                        <li class="btn"><a data-scroll href="#home" class="white"><h3>Home</h3></a></li>
+                        <li class="btn"><a data-scroll href="#about" class="white"><h3>About</h3></a></li>
+                        <li class="btn"><a data-scroll href="#projects" class="white"><h3>Projects</h3></a></li>
+                        <li class="btn"><a data-scroll href="#contact" class="white"><h3>Contact</h3></a></li>
                     </ul>
                 </nav>
+                
+                <a  href="#mob-nav" class="menu-link c-hamburger c-hamburger--rot">
+                    <span></span>
+                </a>
+                <div class="panel">
+                    <nav id="mob-nav">
+                        <ul class="mob">
+                            <li class="btn"><a data-scroll href="#home" class="white"><h3>Home</h3></a></li>
+                            <li class="btn"><a data-scroll href="#about" class="white"><h3>About</h3></a></li>
+                            <li class="btn"><a data-scroll href="#projects" class="white"><h3>Projects</h3></a></li>
+                            <li class="btn"><a data-scroll href="#contact" class="white"><h3>Contact</h3></a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </div>
     </header>
-    <div class="col-12 center white">
+    <div class="video col-12 center white">
         <div class="title">
             <h1>Nick O'Neill</h1>
             <h3>Fun, creative &amp; calculated!</h3>
@@ -42,43 +58,99 @@
         </div>
     </div>
     <div class="fit bg-white">
-        <div class="center col-12 lg-flex container bg-white">
-            <div class="lg-col-4 sm-col-12 border rounded py2">
+        <div id="about" class="center col-12 lg-flex container bg-white">
+            <div class="lg-col-4 sm-col-12 py2">
                 <h3>Making a difference</h3>
                 <i class="fa fa-globe fa-5x py2"></i>
-                <hr>
-                <p class="p2">I believe it's important to use what I know to make the world around us a better place &amp; to enrich those I can reach. I controbute to open source projects.</p>
+                
+                <p class="p2">Nick founded <a href="http://www.maximizedpotential.co.nz">Maximized Potential Ltd</a> &amp; continues to work from this company helping people/comapnies in need. The company was founded in 2013 &amp; went international in 2014.</p>
             </div>
-            <div class="lg-col-4 sm-col-12 border rounded py2">
+            <div class="lg-col-4 sm-col-12 py2">
                 <h3>Realizing new potential</h3>
-                <i class="fa fa-cog fa-5x py2"></i>
-                <hr>
-                <p class="p2">Technology is developing at a rapid rate &amp; the general openness of the web development community is like none other. I believe it's important to stay plugged in &amp; up to date.</p>
+                <i class="fa fa-street-view fa-5x py2"></i>
+                
+                <p class="p2">Nick has helped people/companies both in New Zealand &amp; overseas to acheive their goals online. He is able to relate to his clients &amp; has built trusted lasting relationships.</p>
             </div>
-            <div class="lg-col-4 sm-col-12 border rounded py2">
+            <div class="lg-col-4 sm-col-12 py2">
                 <h3>Empowered to help others</h3>
                 <i class="fa fa-hand-rock-o fa-5x py2"></i>
-                <hr>
-                <p class="p2">Web development is not everyones cup of tea but it is ours, I want to provide a better user experience, thoughtfulness in design &amp; simplicity in what I provide.</p>
+               
+                <p class="p2">Web development is not everyones cup of tea but it is mine, I want to provide a better user experience, thoughtfulness in design &amp; simplicity in what I provide.</p>
             </div>
 
         </div>
     </div>
-        <footer class="bg-black center col-12 clearfix py3">
-            <div class="sm-col sm-col-12 md-col-6 lg-col-6">
-                <h3>Connect with me</h3>
-                <p><a href="tel:+64272264256"><i class="fa fa-phone p1"></i>(027)2264256</a></p>
-                <p><a href="mailto:service@maximizedpotential.co.nz"><i class="fa fa-envelope-o p1"></i>Email</a></p>
-
-                <a href="https://m.facebook.com/maximizedpotentialnz"><i class="fa fa-facebook-square fa-3x"></i></a>
-                <a href="https://plus.google.com/+MaximizedPotentialLtdAuckland"><i class="fa fa-google-plus-square fa-3x"></i></a>
-                <a href="http://@MaxPLtd"><i class="fa fa-twitter-square fa-3x"></i></a>
-                <a href="https://nz.linkedin.com/pub/nick-o-neill/a7/b7a/751"><i class="fa fa-linkedin-square fa-3x"></i></a>
+        <div class="fit bg-blue">
+        <div id="projects" class="center col-12 lg-flex container">
+            <div class="lg-col-4 sm-col-12 py2">
+                <h3>JavaScript Game</h3>
+                <i class="fa fa-gamepad fa-5x py2"></i>
+                <p class="p2">Creating this game was not only an opertunity to apply my skills but it was fun. It brought back the days of Street Fighter while still providing an avenue for learning. It is fully responsive &amp; acheived using HTML5, CSS3 + JavaScript.<a href="game/"> Play it now!</a></p>
             </div>
-            <div class="sm-col sm-col-12 md-col-6 lg-col-6">
-                <h3>About me</h3>
-                <p class="px4">I have a passion for modern web technology, I like to know why something does what it does &amp; I believe that is the reason I'm able to explain in simple terms how things work. I am skilled in HTML5, CSS3, PHP, JavaScript, jQuery, MySQL &amp; Photoshop.</p>
+            <div class="lg-col-4 sm-col-12 py2">
+                <h3>Online Toy Store</h3>
+                <i class="fa fa-child fa-5x py2"></i>
+                
+                <p class="p2">The online toy store is fully responsive &amp; was built using HTML5 + CSS3. The slider is CSS3 only with SVG animation through the website &amp; blend-mode. This is a website for kids &amp; designed to be used by kids.<a href="toy_store/"> Check it out!</a></p>
+            </div>
+            <div class="lg-col-4 sm-col-12 py2">
+                <h3>Forum Built on PHP</h3>
+                <i class="fa fa-skyatlas fa-5x py2"></i>
+               
+                <p class="p2">This forum is live &amp; fully functional. It is a place for discussion on web related things but anyone can join in. It is fully responsive built with HTML5, CSS3, PHP &amp; MySQL.<a href="http://forum.maximizedpotential.co.nz"> Have a look!</a></p>
+            </div>
+
+        </div>
+    </div>
+        <footer id="contact"  class="bg-black center col-12 clearfix py3">
+            <div class="container">
+                <div class="sm-col sm-col-12 md-col-6 lg-col-6">
+                    <h3>Connect with me</h3>
+                    <p><a href="tel:+64272264256"><i class="fa fa-phone p1"></i>(027)2264256</a></p>
+                    <p><a href="mailto:service@maximizedpotential.co.nz"><i class="fa fa-envelope-o p1"></i>Email</a></p>
+
+                    <a href="https://m.facebook.com/maximizedpotentialnz"><i class="fa fa-facebook-square fa-3x"></i></a>
+                    <a href="https://plus.google.com/+MaximizedPotentialLtdAuckland"><i class="fa fa-google-plus-square fa-3x"></i></a>
+                    <a href="http://@MaxPLtd"><i class="fa fa-twitter-square fa-3x"></i></a>
+                    <a href="https://nz.linkedin.com/pub/nick-o-neill/a7/b7a/751"><i class="fa fa-linkedin-square fa-3x"></i></a>
+                </div>
+                <div class="sm-col sm-col-12 md-col-6 lg-col-6">
+                    <h3>About Nick</h3>
+                    <img src="img/AAEAAQAAAAAAAAM3AAAAJGM0NmJmZmU2LTQ4OGYtNDBiNC05NmI0LTZhMDE4OTdkZWEwYQ.jpg" alt="Profile pic of Nick">
+                    <p class="px4">I have a passion for modern web technology, I like to know why something does what it does &amp; I believe that is the reason I'm able to explain in simple terms how things work. I am skilled in HTML5, CSS3, PHP, JavaScript, jQuery, MySQL &amp; Photoshop while ever learning new technology.</p>
+                </div>
             </div>
         </footer>
+    <script>
+        smoothScroll.init();
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('.menu-link').bigSlide();
+        });
+    </script>
+    <script>
+        //c-hamburger
+
+        (function() {
+
+          "use strict";
+
+          var toggles = document.querySelectorAll(".c-hamburger");
+
+          for (var i = toggles.length - 1; i >= 0; i--) {
+            var toggle = toggles[i];
+            toggleHandler(toggle);
+          };
+
+          function toggleHandler(toggle) {
+            toggle.addEventListener( "click", function(e) {
+              e.preventDefault();
+              (this.classList.contains("is-active") === true) ? this.classList.remove("is-active") : this.classList.add("is-active");
+            });
+          }
+
+        })();
+    </script>
 </body>
 </html>

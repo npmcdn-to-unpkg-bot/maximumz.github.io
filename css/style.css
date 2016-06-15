@@ -14,15 +14,35 @@ p, blockquote, label {
 
 i {
   color: #0074d9;
-  transition: all 1s ease-out;
 }
 
-i:hover {
-  color: #88f288;
+
+a, footer div p a:hover {
+    text-decoration: none;
+    transition: all 1s ease-out;
+}
+
+a:hover {
+    color: #88f288;
 }
 
 a:hover i {
-  color: #88f288;
+    color: #88f288;
+    transition: all 1s ease-out;
+}
+
+header {
+    position: fixed;
+}
+
+nav ul li a:hover {
+    text-decoration: none;
+    color: #0074d9;
+}
+
+.video {
+    padding-top: 90px;
+    height: 350px;
 }
 
 .full-pic {
@@ -33,7 +53,7 @@ a:hover i {
 }
 
 .title {
-  height: 12em;
+  height: 100%;
   padding-top: 1em;
   padding-bottom: 3em;
   text-shadow: 2px 2px 4px #000000;
@@ -41,17 +61,45 @@ a:hover i {
 }
 
 .title h1 {
-  font-size: 3em;
+    font-size: 3em;
+    padding-top: 50px;
+    vertical-align: middle;
 }
 
 body {
     overflow-x: hidden;
 }
 
-i.fa.fa-american-sign-language-interpreting {
+i.fa.fa-hand-spock-o {
     position: absolute;
     z-index: 100;
     color: white;
+    padding-top: .15em;
+}
+
+#about, #projects, #contact {
+    padding-top: 4em;
+    padding-bottom: 4em;
+}
+
+#projects, #projects .fa {
+    color: white;
+}
+
+#projects a {
+    color: #88f288;
+}
+
+#projects a:hover {
+    color: black;
+    text-decoration: none;
+    transition: all .3s ease-out;
+}
+
+#contact img {
+    max-width: 90px;
+    height: auto;
+    border-radius: 50%;
 }
 
 footer {
@@ -109,11 +157,111 @@ video {
   opacity: .5;
 }
 
-@media screen and (max-device-width: 800px) {
-  html {
-    background: url(../video/fullscreen.png) #000 no-repeat center center fixed;
+@media (min-width: 701px) {
+#mob-nav, .c-hamburger {
+    display: none;
+}
+}
+
+@media (max-width: 700px) {
+  .video {
+    background: url(../video/My_Movie.jpg) #000 no-repeat center center fixed;
   }
+
   #bgvid {
     display: none;
   }
+
+#mob-nav {
+
+}
+    
+    .mob {
+        display: table-caption;
+    }
+    
+.panel {
+    position: fixed;
+    left: -15.625em; /*left or right and the width of your navigation panel*/
+    width: 15.625em; /*should match the above value*/
+}
+    
+    .panel #mob-nav{
+        background-color: black;
+        display: inline-block;
+    }
+    
+.c-hamburger {
+  display: block;
+  z-index: 101;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 90px;
+  height: 90px;
+  font-size: 0;
+  text-indent: -9999px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.c-hamburger:focus {
+  outline: none;
+}
+    
+.c-hamburger span {
+  display: block;
+  position: absolute;
+  top: 44px;
+  left: 18px;
+  right: 18px;
+  height: 8px;
+  background: white;
+}
+
+.c-hamburger span::before,
+.c-hamburger span::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-color: #fff;
+  content: "";
+}
+
+.c-hamburger span::before {
+  top: -20px;
+}
+
+.c-hamburger span::after {
+  bottom: -20px;
+}
+    
+.c-hamburger--rot {
+  background-color: #28aadc;
+}
+
+.c-hamburger--rot span {
+  transition: transform 0.3s;
+}
+
+/* active state, i.e. menu open */
+.c-hamburger--rot.is-active {
+  background-color: #166888;
+}
+
+.c-hamburger--rot.is-active span {
+  transform: rotate(90deg);
+}
+
+    #desk-nav {
+        display: none;
+    }
+
 }
