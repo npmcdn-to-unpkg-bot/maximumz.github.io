@@ -759,6 +759,7 @@
            if (!$(e.target).parents().andSelf().is(menuLink) && !$(e.target).closest(settings.menu).length && controller.getState() === 'open')  {
              view.toggleClose();
            }
+              
           });
         }
       },
