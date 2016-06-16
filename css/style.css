@@ -94,18 +94,6 @@ nav ul li a:hover {
   animation: imageAnimation 24s linear infinite 0s;
 }
 
-@media only screen and (min-width: 768px) {
-  .slideshow li h3 {
-    bottom: 30px;
-    font-size: 8.125em;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .slideshow li h3 {
-    font-size: 10.9375em;
-  }
-}
-
 .slideshow li:nth-child(1) span {
   background-image: url(../img/sky.jpg);
 }
@@ -129,70 +117,6 @@ nav ul li a:hover {
   -webkit-animation-delay: 18s;
   -moz-animation-delay: 18s;
   animation-delay: 18s;
-}
-
-@-webkit-keyframes imageAnimation {
-  0% {
-    opacity: 0;
-    -webkit-animation-timing-function: ease-in;
-  }
-  12.5% {
-    opacity: 1;
-    -webkit-animation-timing-function: ease-out;
-  }
-  25% {
-    opacity: 1;
-  }
-  37.5% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@-moz-keyframes imageAnimation {
-  0% {
-    opacity: 0;
-    -moz-animation-timing-function: ease-in;
-  }
-  12.5% {
-    opacity: 1;
-    -moz-animation-timing-function: ease-out;
-  }
-  25% {
-    opacity: 1;
-  }
-  37.5% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes imageAnimation {
-  0% {
-    opacity: 0;
-    -webkit-animation-timing-function: ease-in;
-    -moz-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-  12.5% {
-    opacity: 1;
-    -webkit-animation-timing-function: ease-out;
-    -moz-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-  25% {
-    opacity: 1;
-  }
-  37.5% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
 }
 
 .no-cssanimations .slideshow li span {
@@ -328,6 +252,70 @@ footer {
   }
   100% {
     transform: translateY(0px);
+  }
+}
+
+@-webkit-keyframes imageAnimation {
+  0% {
+    opacity: 0;
+    -webkit-animation-timing-function: ease-in;
+  }
+  12.5% {
+    opacity: 1;
+    -webkit-animation-timing-function: ease-out;
+  }
+  25% {
+    opacity: 1;
+  }
+  37.5% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes imageAnimation {
+  0% {
+    opacity: 0;
+    -moz-animation-timing-function: ease-in;
+  }
+  12.5% {
+    opacity: 1;
+    -moz-animation-timing-function: ease-out;
+  }
+  25% {
+    opacity: 1;
+  }
+  37.5% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes imageAnimation {
+  0% {
+    opacity: 0;
+    -webkit-animation-timing-function: ease-in;
+    -moz-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  12.5% {
+    opacity: 1;
+    -webkit-animation-timing-function: ease-out;
+    -moz-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  25% {
+    opacity: 1;
+  }
+  37.5% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
