@@ -48,6 +48,8 @@ nav {
 
 .navbar:after {
     content: url(../img/shadow-line.png);
+    position: absolute;
+    max-width: 100%;
 }
 
 .navbar-nav>li>a {
@@ -301,6 +303,18 @@ ul.social-list {
 }
     .navbar-form {
         max-width: 80%;
+    }
+    
+    .ls_result_div {
+    transform: translateX(0px);
+    }
+    
+    .grid {
+        margin-left: 0px;
+    }
+    
+    .grid-item {
+    min-width: 100%;
     }
     
     footer, .footer-left, .footer-right, .text-right {
