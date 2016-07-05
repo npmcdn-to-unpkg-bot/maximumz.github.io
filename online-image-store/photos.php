@@ -42,24 +42,25 @@ if (session_id() == '') {
 
     </div>
 </div>
-
-<?php include '/conf/footer.php'; ?>
+<?php include 'conf/footer.php'; ?>
     </body>
-    <script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
-    <script>
-        $('.grid').masonry({
-            // options
-            itemSelector: '.grid-item',
-            columnWidth: 200,
-            gutter: 10
-        });
-    </script>
     <script>
         //search
         $("#ls_query").ajaxlivesearch({
             loaded_at: <?php echo $time; ?>,
             token: <?php echo "'" . $token . "'"; ?>,
             max_input: <?php echo $maxInputLength; ?>,
+        });
+    </script>
+    <script>
+        $('.row').imagesLoaded( function() {
+            // images have loaded
+            $('.grid').masonry({
+            // options
+            itemSelector: '.grid-item',
+            columnWidth: 200,
+            gutter: 10
+        });
         });
     </script>
 </html>

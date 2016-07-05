@@ -1,6 +1,6 @@
 <?php 
-include '/conf/head.php';
-include '/conf/header.php'; 
+include 'conf/head.php';
+include 'conf/header.php'; 
 
 file_exists(__DIR__ . DIRECTORY_SEPARATOR . 'core' . DIRECTORY_SEPARATOR . 'Handler.php') ? require_once __DIR__ . DIRECTORY_SEPARATOR . 'core' . DIRECTORY_SEPARATOR . 'Handler.php' : die('There is no such a file: Handler.php');
 file_exists(__DIR__ . DIRECTORY_SEPARATOR . 'core' . DIRECTORY_SEPARATOR . 'Config.php') ? require_once __DIR__ . DIRECTORY_SEPARATOR . 'core' . DIRECTORY_SEPARATOR . 'Config.php' : die('There is no such a file: Config.php');
@@ -84,17 +84,8 @@ if (session_id() == '') {
 
     </div>
 </div>
-    <?php include '/conf/footer.php'; ?>
+    <?php include 'conf/footer.php'; ?>
     </body>
-    <script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
-    <script>
-        $('.grid').masonry({
-            // options
-            itemSelector: '.grid-item',
-            columnWidth: 200,
-            gutter: 10
-        });
-    </script>
     <script>
         //search
         $("#ls_query").ajaxlivesearch({
@@ -103,4 +94,16 @@ if (session_id() == '') {
             max_input: <?php echo $maxInputLength; ?>,
         });
     </script>
+    <script>
+        $('.row').imagesLoaded( function() {
+            // images have loaded
+            $('.grid').masonry({
+            // options
+            itemSelector: '.grid-item',
+            columnWidth: 200,
+            gutter: 10
+        });
+        });
+    </script>
+
 </html>
