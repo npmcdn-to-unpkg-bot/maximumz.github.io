@@ -295,7 +295,7 @@ ul.social-list {
 }
 
 @media (max-width: 767px) {
-    body {
+    html {
     overflow-x: hidden;
     }
     
