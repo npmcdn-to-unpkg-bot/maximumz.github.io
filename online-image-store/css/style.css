@@ -295,12 +295,17 @@ ul.social-list {
 }
 
 @media (max-width: 767px) {
+    body {
+    overflow-x: hidden;
+    }
+    
     header {
     margin-bottom: 0;
-}
+    }
+    
     #header-logo, .underline-color, .navbar-nav>li:hover .underline-color {
     display: none;
-}
+    }
     .navbar-form {
         max-width: 80%;
     }
@@ -325,9 +330,9 @@ ul.social-list {
     display: flex;
     flex-direction: column;
     margin-top: 2em; 
-}
+    }
     .footer-right ul li a {
     color: white;
     text-align: center;
-}
+    }
 }
