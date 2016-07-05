@@ -138,6 +138,7 @@ nav ul li a:hover {
 #about, #projects, #contact {
     padding-top: 4em;
     padding-bottom: 4em;
+    text-align: center;
 }
 
 #projects, #projects .fa {
