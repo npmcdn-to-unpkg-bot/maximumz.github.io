@@ -38,6 +38,7 @@ $reg_error = $_SESSION['reg_error'];
                   <div class="title">
                        <h1>Login</h1>
                        <h5>Please enter your details below!</h5>
+                       <h5>If you would like to test use <br><br>username: <b>demo@gmail.com</b><br><br>password: <b>11111111</b></h5>
                    </div>
                    <div class="form-group">
                         <input class="form-control" type="text" name="login_email" placeholder="Email">
